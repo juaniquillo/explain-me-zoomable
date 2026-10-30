@@ -6,8 +6,7 @@ Template itself has no run command. Each lesson must define one single run comma
 
 ## Per-topic overrides
 
-<!-- Fill per-lesson with stack-specific commands and explanation method. Example:
-- Run: `npm run dev` / `python -m http.server` / `cargo run`
-- Method for this tech: visual / step-by-step / analogy->code->gotchas / compare-contrast
-- Gitignore: append the lines your stack needs (e.g. Node: `node_modules/ dist/` / Python: `__pycache__/ .venv/`)
--->
+- Run: `npm run dev` (serve), `npm run build` → `dist/` (servable output), `npm run preview` (serve `dist/`)
+- Method for this tech: visual / interactive (wheel-at-cursor + drag + pinch demo)
+- Stack: Vite + TypeScript DOM + Tailwind v4 (`@tailwindcss/vite`; `src/zoomable.ts` source of truth, `src/main.ts` wires the demo, `src/style.css` is Tailwind + `.dark` variant + Shiki dual-theme CSS)
+- Gitignore: `node_modules/`, `dist/`

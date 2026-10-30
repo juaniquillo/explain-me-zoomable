@@ -4,4 +4,4 @@ Copy this row into your central log (set location here: <!-- e.g. `explain-me-lo
 
 | Date | Repo | Topic | Summary |
 | ---- | ---- | ----- | ------- |
-| YYYY-MM-DD | `explain-me-<topic>` | Topic name | 2-3 line human summary of what you learned. |
+| 2026-10-30 | `explain-me-zoomable` | Pointer-anchored image pan/zoom | Zoom keeps the pixel under the cursor fixed via `translate += (cursor-center)*(1-ratio)`, pan clamps to half-overflow of the viewport content box, pinch = zoom-at-last-midpoint plus finger-shift, scale capped at natural 1:1. Demo: Vite, `npm run build` → servable `dist/`. |

@@ -1,15 +1,16 @@
-# Topic
-
-Fill this per-lesson. Short is fine for easy topics, go long for hard ones. This is the only file you must edit before running the first prompt.
+# Topic — pointer-anchored image pan/zoom (`src/zoomable.ts`)
 
 ## What I worked on
 
-<!-- What tech, where did you touch it? Link to code if relevant. -->
+An image viewer for the resume landing page (original: [resume/resources/js/landing/zoomable.ts](https://github.com/juaniquillo/resume/blob/main/resources/js/landing/zoomable.ts)): wheel-to-zoom, drag-to-pan, pinch, double-click / button zoom, capped at the image's natural (1:1) size. Code in `src/zoomable.ts`, demo in `src/index.html`.
 
 ## What I think happens
 
-<!-- Your current mental model, even if wrong. -->
+`scale` + `translateX/Y` rendered as `translate() scale()` about the image center. Zooming adjusts translate so the pixel under the cursor stays under the cursor; panning is clamped so you can't drag past the zoomed edge.
 
 ## What confuses me / what I need
 
-<!-- Specific questions, errors, surprises. -->
+- The anchor correction `translate += (cursor - center) * (1 - ratio)` — why that exact form?
+- Why clamp against the viewport *content box* (minus padding) and not the border box?
+- Pinch: why anchor zoom at `lastMidpoint` then shift by `middle - anchor`, instead of just zooming at the current midpoint?
+- Why cap at `naturalWidth / clientWidth`, and why `transformOrigin: 50% 50%` matters.

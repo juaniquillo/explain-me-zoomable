@@ -7,3 +7,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+# Per-topic (zoomable demo: Vite)
+node_modules/
+dist/
+# Local env (see .env.example); Cloudflare Pages provides these at build
+.env
+.env.local
