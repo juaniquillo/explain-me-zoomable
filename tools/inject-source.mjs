@@ -28,7 +28,7 @@ function decodeEntities(s) {
 }
 
 // 1. Full-file source viewer.
-const viewer = /(<pre class="[^"]*max-h-\[480px\][^"]*"><code class="shiki">)[\s\S]*?(<\/code><\/pre>)/;
+const viewer = /(<pre\s+class="[^"]*max-h-\[480px\][^"]*"><code class="shiki">)[\s\S]*?(<\/code><\/pre>)/;
 if (!viewer.test(html)) {
     throw new Error('source-viewer <pre> not found in src/index.html');
 }
