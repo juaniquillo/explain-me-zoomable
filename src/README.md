@@ -8,6 +8,8 @@
 
 ## Run
 
+**Live:** https://explain-me-zoomable.pages.dev/
+
 From repo root: `npm install`, then `npm run dev` (dev server), `npm run build` (emits `dist/`), `npm run preview` (serves `dist/`).
 
 `og:image` needs an absolute URL: copy `.env.example` to `.env` and set `VITE_SITE_URL` (any value works locally). On Cloudflare Pages, set `VITE_SITE_URL=https://your-domain` as a build environment variable instead — without it, the meta tags render a broken `%VITE_SITE_URL%` placeholder.
